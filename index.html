@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Library</title>
+    <title>Library  </title>
 
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.js"></script>
@@ -17,13 +17,14 @@
 
         <div class="form-group">
             <ol >
-                <li ng-repeat="eachBook in listOfBooks">{{eachBook}}</li>
+                <li ng-repeat="eachBook in listOfBooks">{{eachBook}} <button class="btn btn-danger" ng-click="deleteValue($index)" >X</button></li>
+                
             </ol>
         </div>
 
         <input type="text" ng-model="book" class="form-control"><br>
         <div class="form-group">
-            <button type="submit" ng-click="enterValues()" class="btn btn-default">Submit</button>
+            <button type="submit" ng-click="enterValue()" class="btn btn-default">Submit</button>
         </div>
 
         <div class="form-group message">

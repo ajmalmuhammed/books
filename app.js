@@ -10,7 +10,7 @@ LibraryController.$inject=['$scope'];
 function LibraryController($scope){
     $scope.listOfBooks=[];
 
-    $scope.enterValues = function(){
+    $scope.enterValue = function(){
 
         if($scope.book ==0){
             console.log($scope.book);
@@ -25,6 +25,10 @@ function LibraryController($scope){
             console.log($scope.listOfBooks);
         }
             
+    }
+    $scope.deleteValue = function(){
+        $scope.listOfBooks.splice($scope.index,1);
+        
     }
 
 }
