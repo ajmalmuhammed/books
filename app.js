@@ -36,8 +36,9 @@ function LibraryController($scope){
         }
             
     }
-    $scope.deleteValue = function(){
-        $scope.listOfBooks.splice($scope.index,1);
+    $scope.deleteValue = function(index){
+        $scope.listOfBooks.splice(index,1);
+        // listOfBooks.slice(listOfBooks.indexOf(item), 1);
         setMessageColor('red')
         $scope.message="Book has been removed succesfully"
         
