@@ -2,47 +2,42 @@
 <html lang="en">
 
 <head>
-    <title>Library  </title>
+    <title>Library </title>
 
     <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.js"></script>
     <script src="app.js"></script>
+
 
 </head>
 
 <body ng-app="Library">
     <div class="container" ng-controller="LibraryController">
         <h1>Library</h1>
-
-
-        <div class="form-group">
-            <ol >
-                <li ng-repeat="eachBook in listOfBooks">{{eachBook}} <button class="btn btn-danger" ng-click="deleteValue($index)" >X</button></li>
-                
-            </ol>
-        </div>
-
-        <input type="text" ng-model="book" class="form-control"><br>
-        <div class="form-group">
-            <button type="submit" ng-click="enterValue()" class="btn btn-default">Submit</button>
-        </div>
-
-        <div class="form-group message">
-            {{message}}
+        <form>
             
-    </div> 
-        <!-- <div class="form-group">
-            <input ng-model="values" id=" lunch-menu" type="text"
-                placeholder="list comma separated dishes you usually have for lunch" class="form-control">
-        </div>
-        <div class="form-group">
-            <button ng-click="display()" class="btn btn-default">Check If Too Much</button>
-        </div>
-        <div class="form-group message">
-            {{output}}
-             Your message can go here. -->
-    </div> 
+                <ol>
+                    <li ng-repeat="eachBook in listOfBooks">{{eachBook}}
+                        <button class="btn btn-danger closebtn" ng-click="deleteValue($index)">X</button>
+                    </li>
+
+                </ol>
+            
+
+            <input type="text" ng-model="book" class="form-control" ng-style="textBoxStyle"><br>
+            <div class="form-group">
+                <button type="submit" ng-click="enterValue()" class="btn btn-success addbtn">Add</button>
+            </div>
+
+            <div class="form-group message" ng-style="messageStyle">
+                {{message}}
+
+            </div>
+        </form>
+
     </div>
+
 
 </body>
 
